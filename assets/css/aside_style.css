@@ -611,7 +611,7 @@ textarea {
   width: 20px;
   height: 20px;
   margin-right: 10px;
-  border: 2px solid #c74ebd;
+  border: 2px solid #000000;
   border-radius: 50%;
   background-color: #fff;
   vertical-align: middle; /* Align with label text */
@@ -621,7 +621,7 @@ textarea {
 
 .radio-container input[type="radio"]:checked + label::before {
   background-color: #c74ebd;
-  border-color: #c74ebd;
+  border-color: #000000;
 }
 
 .radio-container label {
