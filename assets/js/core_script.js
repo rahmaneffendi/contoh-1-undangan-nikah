@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // DATA RSVP AWAL (DUMMY)
   // =========================
   const data = [
-    { name: "Bari", status: "Hadir", message: "Selamat Ya" },
-    { name: "Ali", status: "Tidak Hadir", message: "Maaf, tidak bisa hadir" },
-    { name: "Sara", status: "Hadir", message: "Semoga bahagia selalu" },
+    { name: "Helmi", status: "Hadir", message: "Selamat Yus, Happy Wedding" },
+    { name: "Rizkillah", status: "Hadir", message: "Congrats Yus, Semoga Sakinah mAwaddah Warahmah" },
+    { name: "Acul", status: "Hadir", message: "Semoga bahagia selalu" },
   ];
 
   const submittedDataDiv = document.getElementById("submittedData");
