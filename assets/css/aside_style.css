@@ -920,14 +920,6 @@ button:hover {
   color: #0d2c6c;
 }
 
-.card .date .date-text {
-  color: #222 !important;
-}
-
-.acara .card .date-text {
-  color: #222 !important;
-}
-
 .date-text {
   display: block;
   text-align: left;
