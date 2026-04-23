@@ -282,9 +282,7 @@ body {
 .acara {
   background: linear-gradient(180deg, #2399b3, #1b7f94);
   padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+  width: 100%;
 }
 
 .dan {
@@ -869,14 +867,16 @@ button:hover {
   color: #1a3c6e;
 }
 
-/* CARD */
 .card {
-  backdrop-filter: blur(10px);
   background: #ffffff;
   border-radius: 20px;
   padding: 25px;
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  width: 100%;
+  max-width: 400px; /* penting */
+  margin: 0 auto;   /* biar center tapi gak kecil */
 }
 
 /* TITLE */
@@ -898,9 +898,27 @@ button:hover {
 }
 
 .day {
-  font-size: 70px;
+  font-size: 80px;
   font-weight: bold;
   color: #0d2c6c;
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 90%;
+  }
+
+  .day {
+    font-size: 60px;
+  }
+}
+
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .date-text {
