@@ -856,3 +856,7 @@ button:hover {
     height: 200px;
   }
 }
+
+.flipdown {
+  margin: 0 auto;
+}

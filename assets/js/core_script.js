@@ -1,100 +1,123 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let timer_ = 1734077473; // Unix timestamp
-  let flipdown = new FlipDown(timer_);
+  // =========================
+  // COUNTDOWN (FIXED)
+  // =========================
+  const targetDate = new Date("2026-06-03T00:00:00").getTime() / 1000;
+
+  let flipdown = new FlipDown(targetDate);
   flipdown.start();
+
   flipdown.ifEnded(() => {
-    document.querySelector(".flipdown").innerHTML = `<h2>Timer end</h2>`;
+    document.querySelector(".flipdown").innerHTML = `
+      <h2>💍 Hari Pernikahan Kami 💍</h2>
+      <p>Terima kasih atas doa dan kehadiran Anda</p>
+    `;
   });
+
+  // =========================
+  // DATA RSVP AWAL (DUMMY)
+  // =========================
+  const data = [
+    { name: "Bari", status: "Hadir", message: "Selamat Ya" },
+    { name: "Ali", status: "Tidak Hadir", message: "Maaf, tidak bisa hadir" },
+    { name: "Sara", status: "Hadir", message: "Semoga bahagia selalu" },
+  ];
+
+  const submittedDataDiv = document.getElementById("submittedData");
+
+  data.forEach((item) => {
+    const newItem = document.createElement("div");
+    newItem.classList.add("submitted-item");
+
+    newItem.innerHTML = `
+      <h3>${item.name} (${item.status})</h3>
+      <p>${item.message}</p>
+    `;
+
+    submittedDataDiv.appendChild(newItem);
+  });
+
+  // =========================
+  // FORM RSVP
+  // =========================
+  document
+    .getElementById("rsvpForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const attendance = document.querySelector(
+        'input[name="attendance"]:checked'
+      ).value;
+      const message = document.getElementById("message").value;
+
+      const newItem = document.createElement("div");
+      newItem.classList.add("submitted-item");
+
+      newItem.innerHTML = `
+        <h3>${name} (${attendance})</h3>
+        <p>${message}</p>
+      `;
+
+      submittedDataDiv.appendChild(newItem);
+
+      this.reset();
+      scrollToTop();
+    });
+
+  // =========================
+  // AUDIO CONTROL
+  // =========================
+  const audio = document.getElementById("myAudio");
+  const playButton = document.getElementById("playButton");
+
+  playButton.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      playButton.classList.add("playing");
+      playButton.classList.remove("paused");
+    } else {
+      audio.pause();
+      playButton.classList.add("paused");
+      playButton.classList.remove("playing");
+    }
+  });
+
+  // =========================
+  // SLIDER
+  // =========================
+  let slideIndex = 1;
+
+  function showSlide(n) {
+    let slides = document.querySelectorAll(".mySlide");
+
+    if (n > slides.length) {
+      slideIndex = 1;
+    } else if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    slides.forEach((slide) => (slide.style.display = "none"));
+    slides[slideIndex - 1].style.display = "block";
+  }
+
+  function plusSlide(n) {
+    showSlide((slideIndex += n));
+  }
+
+  // expose ke global biar bisa dipakai di HTML onclick
+  window.plusSlide = plusSlide;
+
+  showSlide(slideIndex);
 });
 
+// =========================
+// SCROLL FUNCTION
+// =========================
 function scrollToTop() {
   const container = document.getElementById("submittedData");
   container.scrollTo({
-    top: -1000,
+    top: 0,
+    behavior: "smooth",
   });
-}
-
-const data = [
-  { name: "Bari", status: "Hadir", message: "Selamat Ya" },
-  { name: "Ali", status: "Tidak Hadir", message: "Maaf, tidak bisa hadir" },
-  { name: "Sara", status: "Hadir", message: "Semoga bahagia selalu" },
-];
-
-for (let i = 0; i < 3; i++) {
-  const submittedDataDiv = document.getElementById("submittedData");
-
-  const newItem = document.createElement("div");
-  newItem.classList.add("submitted-item");
-
-  newItem.innerHTML = `
-    <h3>${data[i].name} (${data[i].status})</h3>
-    <p>${data[i].message}</p>
-  `;
-
-  submittedDataDiv.appendChild(newItem);
-}
-
-document.getElementById("rsvpForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const attendance = document.querySelector(
-    'input[name="attendance"]:checked'
-  ).value;
-  const message = document.getElementById("message").value;
-
-  const submittedDataDiv = document.getElementById("submittedData");
-
-  const newItem = document.createElement("div");
-  newItem.classList.add("submitted-item");
-
-  newItem.innerHTML = `
-  <h3>${name} (${attendance})</h3>
-  <p>${message}</p>
-  `;
-
-  submittedDataDiv.appendChild(newItem);
-
-  document.getElementById("rsvpForm").reset();
-  scrollToTop();
-});
-
-const audio = document.getElementById("myAudio");
-const playButton = document.getElementById("playButton");
-
-playButton.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.play();
-    playButton.classList.add("playing");
-    playButton.classList.remove("paused");
-  } else {
-    audio.pause();
-    playButton.classList.add("paused");
-    playButton.classList.remove("playing");
-  }
-});
-
-let slideIndex = 1;
-
-function showSlide(n) {
-  let i;
-  let slides = document.querySelectorAll(".mySlide");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  } else if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-}
-
-showSlide(slideIndex);
-
-function plusSlide(n) {
-  showSlide((slideIndex += n));
 }
