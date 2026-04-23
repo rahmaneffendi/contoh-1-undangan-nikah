@@ -29,7 +29,10 @@
 } */
 
 :root {
-  --primary: #002c78;
+  /* --primary: #002c78; */
+  /* --primary: #8b5e3c; coklat soft */
+  --primary: #6b3e2e; /* coklat elegan */
+  --accent: #d88c9a;   /* pink rose */
 }
 
 * {
@@ -62,7 +65,8 @@ body {
 }
 
 body {
-  background-color: #000f2a;
+  background-color: #f6efe7; /* cream soft */
+  /* background-color: #000f2a; */
   display: flex;
   justify-content: left;
 }
@@ -164,7 +168,8 @@ body {
 }
 
 .ayat {
-  background-color: #2399b3;
+  /* background-color: #2399b3; */
+  background-color: #f3e5d8; /* cream */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -280,13 +285,15 @@ body {
 }
 
 .acara {
-  background: linear-gradient(180deg, #2399b3, #1b7f94);
+  /* background: linear-gradient(180deg, #2399b3, #1b7f94); */
+  background: linear-gradient(180deg, #f3e5d8, #e8d5c4);
   padding: 40px 20px;
   width: 100%;
 }
 
 .dan {
-  color: var(--primary);
+  color: var(--accent);
+  /* color: var(--primary); */
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -305,7 +312,8 @@ body {
 
 .akad .judul,
 .resepsi .judul {
-  background-color: #005eff;
+  /* background-color: #005eff; */
+  background-color: #6b3e2e;
   font-size: 30px;
   font-weight: 700;
   padding: 10px 0;
@@ -419,7 +427,8 @@ body {
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background-color: #2399b3;
+  /* background-color: #2399b3; */
+  background-color: #f3e5d8; /* cream */
 }
 
 .galeri h1 {
@@ -549,7 +558,9 @@ textarea {
   color: white;
   font-size: 20px;
   text-align: left;
-  background-color: #000f2ac6;
+  /* background-color: #000f2ac6; */
+  background-color: #fffaf5;
+  color: #333;
 }
 
 .radio-box {
@@ -566,7 +577,9 @@ textarea {
   flex-direction: row;
   width: 140px;
   padding: 10px 5px 5px 5px;
-  background-color: #000f2ac6;
+  /* background-color: #000f2ac6; */
+  background-color: #fffaf5;
+  color: #333;
   border-radius: 10px;
   border: 2px solid var(--primary);
   cursor: pointer;
@@ -621,7 +634,9 @@ button {
 }
 
 button:hover {
-  background-color: #001d4f;
+  /* background-color: #001d4f; */
+  /* background-color: #4e2c1d; */
+  background-color: var(--accent);
 }
 
 .rsvp h2 {
@@ -641,7 +656,8 @@ button:hover {
   background-color: rgb(113, 186, 255);
   padding: 20px;
   border-radius: 5px;
-  border: 3px solid #0059ffc6;
+  /* border: 3px solid #0059ffc6; */
+  border: 2px solid #d6bfa7;
   overflow-y: scroll;
 }
 
@@ -653,7 +669,9 @@ button:hover {
 }
 
 .submitted-item {
-  background-color: #000f2ac6;
+  /* background-color: #000f2ac6; */
+  background-color: #fffaf5;
+  color: #333;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -674,7 +692,8 @@ button:hover {
 }
 
 .hadiah {
-  background-color: #2399b3;
+  /* background-color: #2399b3; */
+  background-color: #f3e5d8; /* cream */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -696,7 +715,8 @@ button:hover {
   width: 90%;
   background-color: white;
   margin-top: 20px;
-  border: 3px solid #005eff;
+  /* border: 3px solid #005eff; */
+  border: 2px solid #d6bfa7;
   border-radius: 20px;
   padding: 20px;
 }
@@ -881,7 +901,8 @@ button:hover {
 
 /* TITLE */
 .card h2 {
-  background: linear-gradient(90deg, #005eff, #3a7bff);
+  /* background: linear-gradient(90deg, #005eff, #3a7bff); */
+  background: linear-gradient(90deg, var(--primary), var(--accent));
   color: white;
   padding: 12px;
   border-radius: 12px;
@@ -917,7 +938,8 @@ button:hover {
 .day {
   font-size: 70px;
   font-weight: bold;
-  color: #0d2c6c;
+  /* color: #0d2c6c; */
+  color: #5a3a2a;
 }
 
 .date-text {
@@ -938,7 +960,8 @@ button:hover {
 .divider {
   width: 60%;
   height: 2px;
-  background: #e0e0e0;
+  /* background: #e0e0e0; */
+  background: var(--accent);
   margin: 20px auto;
   border-radius: 10px;
 }
