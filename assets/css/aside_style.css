@@ -702,24 +702,36 @@ button:hover {
   margin-top: 20px;
   border: 3px solid #005eff;
   border-radius: 20px;
-  padding: 10px;
+  padding: 20px;
 }
 
+/* kasih jarak antar bank */
 .hadiah .card .bank {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  padding: 10px 0;
 }
 
+/* garis pemisah antar bank */
+.hadiah .card .bank:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+/* rapihin teks */
 .hadiah .card .bank p {
   color: var(--primary);
   font-weight: 700;
   text-align: left;
+  line-height: 1.4;
+  margin: 0;
 }
 
+/* kecilin & rapihin logo */
 .hadiah .card img {
-  width: 100px;
+  width: 80px;
+  height: auto;
+  object-fit: contain;
 }
 
 .atau {
