@@ -290,6 +290,10 @@ body {
   background: linear-gradient(180deg, #f3e5d8, #e8d5c4);
   padding: 40px 20px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* jarak antar card */
 }
 
 .dan {
@@ -932,7 +936,9 @@ button:hover {
 
   width: 100%;
   max-width: 400px; /* penting */
-  margin: 0 auto;   /* biar center tapi gak kecil */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* TITLE */
