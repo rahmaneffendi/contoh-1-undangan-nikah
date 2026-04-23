@@ -926,7 +926,7 @@ button:hover {
   font-size: 18px;
   /* color: #0d2c6c; */
   /* color: #1a1a1a; */
-  color: #222;
+  color: #222 !important;
   line-height: 1.4;
 }
 
