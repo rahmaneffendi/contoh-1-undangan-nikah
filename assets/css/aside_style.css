@@ -889,20 +889,6 @@ button:hover {
   margin-bottom: 20px;
 }
 
-/* DATE */
-.date {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.day {
-  font-size: 80px;
-  font-weight: bold;
-  color: #0d2c6c;
-}
-
 @media (max-width: 480px) {
   .card {
     max-width: 90%;
@@ -921,10 +907,28 @@ button:hover {
   transform: translateY(-5px);
 }
 
+/* DATE */
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.day {
+  font-size: 70px;
+  font-weight: bold;
+  color: #0d2c6c;
+}
+
 .date-text {
+  display: block;
   text-align: left;
   font-size: 18px;
-  color: #0d2c6c;
+  /* color: #0d2c6c; */
+  /* color: #1a1a1a; */
+  color: #222;
+  line-height: 1.4;
 }
 
 /* DIVIDER */
