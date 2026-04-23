@@ -132,7 +132,7 @@ body {
 }
 
 .cover {
-  background-image: url(../images/bg.jpg);
+  background-image: url(../images/bg.png);
   background-size: cover;
   background-position: center;
   display: flex;
