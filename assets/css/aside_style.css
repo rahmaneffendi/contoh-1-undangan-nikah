@@ -972,10 +972,11 @@ button:hover {
 }
 
 .day {
-  font-size: 70px;
-  font-weight: bold;
-  /* color: #0d2c6c; */
+  font-size: 65px;
+  font-weight: 700;
   color: #5a3a2a;
+
+  font-family: "Dancing Script", cursive;
 }
 
 .date-text {
@@ -992,29 +993,24 @@ button:hover {
   color: #222 !important;
 }
 
-/* DIVIDER */
 .divider {
-  width: 60%;
+  width: 50%;
   height: 2px;
-  /* background: #e0e0e0; */
-  background: var(--accent);
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
   margin: 20px auto;
-  border-radius: 10px;
 }
 
-/* TIME */
 .time {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   color: #1a3c6e;
   margin-bottom: 10px;
 }
 
-/* LOCATION */
 .location {
   font-size: 15px;
-  color: #555;
-  line-height: 1.5;
+  color: #666;
+  line-height: 1.6;
 }
 
 .video-acara {
@@ -1028,4 +1024,45 @@ button:hover {
   display: block;
 
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.acara .card {
+  background: rgba(255, 250, 245, 0.95);
+  backdrop-filter: blur(6px);
+
+  border-radius: 25px;
+  padding: 25px 20px;
+  margin: 20px 0;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #eaded0;
+
+  transition: 0.3s;
+}
+
+.acara .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.acara .card h2 {
+  background: linear-gradient(90deg, #6b3e2e, #d88c9a);
+  color: white;
+
+  padding: 12px;
+  border-radius: 15px;
+
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.date-text p:first-child {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.date-text p:last-child {
+  font-size: 16px;
+  color: #777;
 }
