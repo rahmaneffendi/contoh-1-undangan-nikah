@@ -700,13 +700,13 @@ button:hover {
 .submitted-item h3 {
   font-family: "Gowun Batang", serif;
   font-weight: 700;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .submitted-item p {
   font-family: "Gowun Batang", serif;
   font-weight: 400;
-  color: #ffffff;
+  color: #000000;
 }
 
 .hadiah {
