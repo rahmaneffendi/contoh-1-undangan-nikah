@@ -40,7 +40,8 @@
   margin: 0;
   text-align: center;
   box-sizing: border-box;
-  color: white;
+  color: rgb(12, 12, 12);
+  /* color: white; */
   font-family: "Gowun Batang", serif;
   font-weight: 400;
   font-style: normal;
