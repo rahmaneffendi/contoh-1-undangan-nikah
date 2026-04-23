@@ -398,10 +398,23 @@ body {
 }
 
 .lokasi .maps {
-  width: 90%;
-  height: 250px;
-  border: 4px solid white;
-  border-radius: 20px;
+  width: 65%;
+  max-width: 280px;
+  height: 180px;
+
+  border-radius: 15px;
+  border: none;
+  overflow: hidden;
+
+  opacity: 0.85;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  margin: 15px 0;
+}
+
+.lokasi .maps:hover {
+  opacity: 1;
+  transform: scale(1.03);
 }
 
 .lokasi .lihatPeta {
