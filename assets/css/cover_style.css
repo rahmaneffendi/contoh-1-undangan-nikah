@@ -124,3 +124,13 @@ section {
     transform: translateX(35vw);
   }
 }
+
+.video-acara {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  margin-top: 20px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
