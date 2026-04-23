@@ -1018,7 +1018,9 @@ button:hover {
 }
 
 .video-acara {
-  width: 70%;
+  /* width: 70%; */
+  width: 560;
+  height: 315;
   max-width: 300px;
   border-radius: 15px;
   margin-top: 20px auto;
