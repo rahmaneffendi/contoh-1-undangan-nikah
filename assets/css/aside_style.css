@@ -860,3 +860,13 @@ button:hover {
 .flipdown {
   margin: 0 auto;
 }
+
+.jam {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.jam strong {
+  font-size: 18px;
+  color: #1a3c6e;
+}
