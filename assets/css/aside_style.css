@@ -1093,9 +1093,9 @@ button:hover {
   font-weight: 600;
   text-decoration: none;
 
-  background: linear-gradient(90deg, #000, #d4af37, #000);
-  background-size: 200% auto;
-  background-position: left center;
+  background: linear-gradient(90deg, #000, #d4af37, #000, #d4af37, #000);
+  background-size: 300% auto;
+  background-position: 0% center;
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -1103,22 +1103,18 @@ button:hover {
   color: transparent;
   -webkit-text-fill-color: transparent;
 
-  transition: 0.5s;
-
   border-bottom: 1px solid rgba(212, 175, 55, 0.5);
   padding-bottom: 2px;
+
+  animation: lazwanGoldMove 4s linear infinite;
 }
 
-.powered a:hover {
-  background-position: right center;
-  text-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
-}
-
-@media screen and (max-width: 768px) {
-  .powered a {
-    background: none;
-    color: #d4af37;
-    -webkit-text-fill-color: unset;
-    border-bottom: 1px solid #d4af37;
+/* animasi jalan terus */
+@keyframes lazwanGoldMove {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 300% center;
   }
 }
