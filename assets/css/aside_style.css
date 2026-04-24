@@ -1090,27 +1090,35 @@ button:hover {
 }
 
 .powered a {
-  font-size: 15px;
-  color: #555;
-  text-decoration: none;
   font-weight: 600;
-  cursor: pointer;
-  border-bottom: 1px dashed #999;
+  text-decoration: none;
+
+  background: linear-gradient(90deg, #000, #d4af37, #000);
+  background-size: 200% auto;
+  background-position: left center;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  transition: 0.5s;
+
+  border-bottom: 1px solid rgba(212, 175, 55, 0.5);
   padding-bottom: 2px;
-  transition: 0.3s;
 }
 
 .powered a:hover {
-  color: #000;
-  border-bottom: 1px solid #000;
+  background-position: right center;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
 }
 
 @media screen and (max-width: 768px) {
-  .powered {
-    display: block;
-    position: relative;
-    z-index: 10;
-    padding-bottom: 50px;
-    margin-bottom: 30px;
+  .powered a {
+    background: none;
+    color: #d4af37;
+    -webkit-text-fill-color: unset;
+    border-bottom: 1px solid #d4af37;
   }
 }
