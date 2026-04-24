@@ -1106,7 +1106,7 @@ button:hover {
   border-bottom: 1px solid rgba(212, 175, 55, 0.5);
   padding-bottom: 2px;
 
-  animation: lazwanGoldMove 4s linear infinite;
+  animation: lazwanGoldMove 10s ease-in-out infinite;
 }
 
 /* animasi jalan terus */
