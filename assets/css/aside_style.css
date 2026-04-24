@@ -1074,26 +1074,20 @@ button:hover {
 }
 
 .powered {
-  position: fixed;
-  bottom: 12px;
-  right: 16px;
-  font-size: 12px;
-  background: rgba(0,0,0,0.4);
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 20px;
-  backdrop-filter: blur(6px);
-  z-index: 999;
-  transition: 0.3s;
-}
-
-.powered:hover {
-  opacity: 1;
-  transform: translateY(-2px);
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .powered a {
-  color: #fff;
+  color: #555;
   text-decoration: none;
   font-weight: 600;
+}
+
+.powered a:hover {
+  color: #000;
 }
