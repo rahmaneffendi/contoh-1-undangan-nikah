@@ -1075,15 +1075,25 @@ button:hover {
 
 .powered {
   position: fixed;
-  bottom: 10px;
-  right: 15px;
+  bottom: 12px;
+  right: 16px;
   font-size: 12px;
-  opacity: 0.7;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
   z-index: 999;
+  transition: 0.3s;
+}
+
+.powered:hover {
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .powered a {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
