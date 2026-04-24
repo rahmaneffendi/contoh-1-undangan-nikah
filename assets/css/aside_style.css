@@ -1095,10 +1095,14 @@ button:hover {
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
+  border-bottom: 1px dashed #999;
+  padding-bottom: 2px;
+  transition: 0.3s;
 }
 
 .powered a:hover {
   color: #000;
+  border-bottom: 1px solid #000;
 }
 
 @media screen and (max-width: 768px) {
