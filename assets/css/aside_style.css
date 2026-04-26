@@ -1083,6 +1083,7 @@ button:hover {
   box-sizing: border-box;
   position: relative;
   z-index: 10;
+  min-height: 70px;
 }
 
 .powered p {
