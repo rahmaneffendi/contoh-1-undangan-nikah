@@ -790,6 +790,22 @@ button:hover {
   object-fit: contain;
 }
 
+.copy-btn {
+  width: auto;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.copy-btn.copied {
+  background: #d4af37;
+  color: #000;
+}
+
 .atau {
   color: var(--primary);
   font-size: 20px;

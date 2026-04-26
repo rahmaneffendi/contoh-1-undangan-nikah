@@ -121,3 +121,17 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+function copyRekening(nomor, button) {
+  navigator.clipboard.writeText(nomor).then(() => {
+    const originalText = button.innerText;
+
+    button.innerText = "Tersalin";
+    button.classList.add("copied");
+
+    setTimeout(() => {
+      button.innerText = originalText;
+      button.classList.remove("copied");
+    }, 2000);
+  });
+}
